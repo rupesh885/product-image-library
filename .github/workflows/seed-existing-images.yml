@@ -17,7 +17,7 @@ jobs:
       - name: Check out repository
         uses: actions/checkout@v4
 
-      - name: Import available individual images from myImages
+      - name: Import individual images from existing myImages repository
         shell: bash
         run: |
           set -euo pipefail
@@ -26,7 +26,7 @@ jobs:
             local source="$1"
             local destination="$2"
             mkdir -p "$(dirname "$destination")"
-            curl --fail --location --retry 2 \
+            curl --fail --location --retry 2 --silent --show-error \
               "https://raw.githubusercontent.com/rupesh885/myImages/main/$source" \
               --output "$destination"
           }
@@ -44,17 +44,79 @@ jobs:
           download_image "Caustic_Soda.png" "Industrial-Chemicals/ch-csf.png"
           download_image "paracetamol.png" "Pharmaceutical-Drugs/ph-pct.png"
 
-          # Remove the initial test JPEG so the manifest points to the proper imported PNG.
-          rm -f "Indian-Spices/sp-ltp.jpg"
+      - name: Download individual product images referenced by the existing product catalog
+        shell: bash
+        run: |
+          set -u
 
-      - name: Update catalog manifest for imported files
+          download_url() {
+            local url="$1"
+            local destination="$2"
+            mkdir -p "$(dirname "$destination")"
+            if curl --fail --location --retry 2 --silent --show-error "$url" --output "$destination" &&
+               test -s "$destination" &&
+               file --brief --mime-type "$destination" | grep -q '^image/'; then
+              echo "Downloaded $destination"
+            else
+              echo "::warning::Could not download a valid image for $destination; leaving it pending."
+              rm -f "$destination"
+            fi
+          }
+
+          download_url "https://images.unsplash.com/photo-1518977676601-b53f82aba655?auto=format&fit=crop&w=800&q=80" "Fresh-Vegetables/vg-fpt.jpg"
+          download_url "https://images.unsplash.com/photo-1563227812-0ea4c22e6cc8?auto=format&fit=crop&w=800&q=80" "Fresh-Vegetables/vg-fgc.jpg"
+          download_url "https://images.unsplash.com/photo-1592924357228-91a4daadcfea?auto=format&fit=crop&w=800&q=80" "Fresh-Vegetables/vg-fmt.jpg"
+          download_url "https://images.unsplash.com/photo-1625944525533-473f1a3d54e7?auto=format&fit=crop&w=800&q=80" "Fresh-Vegetables/vg-fob.jpg"
+          download_url "https://images.unsplash.com/photo-1540148426945-6cf22a6b2383?auto=format&fit=crop&w=800&q=80" "Fresh-Vegetables/vg-fgl.jpg"
+          download_url "https://images.unsplash.com/photo-1618512496248-a07fe83aa8cb?auto=format&fit=crop&w=800&q=80" "Fresh-Vegetables/vg-fsh.jpg"
+          download_url "https://images.unsplash.com/photo-1563565375-f3fdfdbefa83?auto=format&fit=crop&w=800&q=80" "Fresh-Vegetables/vg-fgp.jpg"
+          download_url "https://images.unsplash.com/photo-1594282486552-05b4d80fbb9f?auto=format&fit=crop&w=800&q=80" "Fresh-Vegetables/vg-fcb.jpg"
+          download_url "https://images.unsplash.com/photo-1568584711075-3d021a7c3ca3?auto=format&fit=crop&w=800&q=80" "Fresh-Vegetables/vg-fcf.jpg"
+
+          download_url "https://images.unsplash.com/photo-1596755094514-f87e34085b2c?auto=format&fit=crop&w=800&q=80" "Textiles-Garments/tx-mfs.jpg"
+          download_url "https://images.unsplash.com/photo-1610030469983-98e550d6193c?auto=format&fit=crop&w=800&q=80" "Textiles-Garments/tx-wkc.jpg"
+          download_url "https://images.unsplash.com/photo-1542272604-780c96856592?auto=format&fit=crop&w=800&q=80" "Textiles-Garments/tx-mdj.jpg"
+          download_url "https://images.unsplash.com/photo-1631049307264-da0ec9d70304?auto=format&fit=crop&w=800&q=80" "Textiles-Garments/tx-cbs.jpg"
+          download_url "https://images.unsplash.com/photo-1583847268964-b28dc8f51f92?auto=format&fit=crop&w=800&q=80" "Textiles-Garments/tx-cbt.jpg"
+          download_url "https://images.unsplash.com/photo-1604014237800-1c9102c219da?auto=format&fit=crop&w=800&q=80" "Textiles-Garments/tx-cfw.jpg"
+          download_url "https://images.unsplash.com/photo-1617627143750-d86bc21e42bb?auto=format&fit=crop&w=800&q=80" "Textiles-Garments/tx-iss.jpg"
+          download_url "https://images.unsplash.com/photo-1584100936595-c0654b55a2e2?auto=format&fit=crop&w=800&q=80" "Textiles-Garments/tx-ccp.jpg"
+          download_url "https://images.unsplash.com/photo-1600121848594-d8644e57abab?auto=format&fit=crop&w=800&q=80" "Textiles-Garments/tx-crd.jpg"
+
+          download_url "https://images.unsplash.com/photo-1581093588401-fbb62a02f120?auto=format&fit=crop&w=800&q=80" "Industrial-Chemicals/ch-sal.jpg"
+          download_url "https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?auto=format&fit=crop&w=800&q=80" "Industrial-Chemicals/ch-lab.jpg"
+          download_url "https://images.unsplash.com/photo-1603555501671-8f96b3fce8e4?auto=format&fit=crop&w=800&q=80" "Industrial-Chemicals/ch-met.jpg"
+          download_url "https://images.unsplash.com/photo-1616401784845-180882ba9ba8?auto=format&fit=crop&w=800&q=80" "Industrial-Chemicals/ch-aca.jpg"
+          download_url "https://images.unsplash.com/photo-1518152006812-edab29b069ac?auto=format&fit=crop&w=800&q=80" "Industrial-Chemicals/ch-foa.jpg"
+          download_url "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=800&q=80" "Industrial-Chemicals/ch-hyp.jpg"
+          download_url "https://images.unsplash.com/photo-1589939705384-5185137a7f0f?auto=format&fit=crop&w=800&q=80" "Industrial-Chemicals/ch-tio.jpg"
+          download_url "https://images.unsplash.com/photo-1584515979956-d9f6e5d09982?auto=format&fit=crop&w=800&q=80" "Industrial-Chemicals/ch-ipa.jpg"
+          download_url "https://images.unsplash.com/photo-1628863353691-0071c8c1874c?auto=format&fit=crop&w=800&q=80" "Industrial-Chemicals/ch-eta.jpg"
+          download_url "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=800&q=80" "Industrial-Chemicals/ch-cbl.jpg"
+          download_url "https://images.unsplash.com/photo-1507668077129-56e32842fceb?auto=format&fit=crop&w=800&q=80" "Industrial-Chemicals/ch-aca-an.jpg"
+
+          download_url "https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?auto=format&fit=crop&w=800&q=80" "Pharmaceutical-Drugs/ph-amc.jpg"
+          download_url "https://images.unsplash.com/photo-1587854692152-cbe660dbde88?auto=format&fit=crop&w=800&q=80" "Pharmaceutical-Drugs/ph-azt.jpg"
+          download_url "https://images.unsplash.com/photo-1471864190281-a93a3070b6de?auto=format&fit=crop&w=800&q=80" "Pharmaceutical-Drugs/ph-met-tab.jpg"
+          download_url "https://images.unsplash.com/photo-1576602976047-174e57a47881?auto=format&fit=crop&w=800&q=80" "Pharmaceutical-Drugs/ph-atv.jpg"
+          download_url "https://images.unsplash.com/photo-1550572017-edd951aa8f72?auto=format&fit=crop&w=800&q=80" "Pharmaceutical-Drugs/ph-omp.jpg"
+          download_url "https://images.unsplash.com/photo-1550572017-4fcdbb59cc32?auto=format&fit=crop&w=800&q=80" "Pharmaceutical-Drugs/ph-pnt.jpg"
+          download_url "https://images.unsplash.com/photo-1585435557343-3b092031a831?auto=format&fit=crop&w=800&q=80" "Pharmaceutical-Drugs/ph-ctz.jpg"
+          download_url "https://images.unsplash.com/photo-1563213126-a4273aed2016?auto=format&fit=crop&w=800&q=80" "Pharmaceutical-Drugs/ph-ibp.jpg"
+          download_url "https://images.unsplash.com/photo-1628771065518-0d82f1938462?auto=format&fit=crop&w=800&q=80" "Pharmaceutical-Drugs/ph-cpf.jpg"
+          download_url "https://images.unsplash.com/photo-1607613009820-a29f7bb81c04?auto=format&fit=crop&w=800&q=80" "Pharmaceutical-Drugs/ph-ors.jpg"
+          download_url "https://images.unsplash.com/photo-1577401239170-897942555fb3?auto=format&fit=crop&w=800&q=80" "Pharmaceutical-Drugs/ph-vbc.jpg"
+          download_url "https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&w=800&q=80" "Pharmaceutical-Drugs/ph-ins.jpg"
+          download_url "https://images.unsplash.com/photo-1584036561566-baf8f5f1b144?auto=format&fit=crop&w=800&q=80" "Pharmaceutical-Drugs/ph-msv.jpg"
+
+      - name: Update catalog manifest with files that actually exist
         shell: python
         run: |
           import csv
           from pathlib import Path
 
           manifest = Path("products.csv")
-          imported = {
+          existing_source = {
               "sp-ltp": "Indian-Spices/sp-ltp.png",
               "sp-rcp": "Indian-Spices/sp-rcp.png",
               "sp3": "Indian-Spices/sp3.png",
@@ -68,24 +130,76 @@ jobs:
               "ch-csf": "Industrial-Chemicals/ch-csf.png",
               "ph-pct": "Pharmaceutical-Drugs/ph-pct.png",
           }
+          url_imports = {
+              "vg-fpt": "Fresh-Vegetables/vg-fpt.jpg",
+              "vg-fgc": "Fresh-Vegetables/vg-fgc.jpg",
+              "vg-fmt": "Fresh-Vegetables/vg-fmt.jpg",
+              "vg-fob": "Fresh-Vegetables/vg-fob.jpg",
+              "vg-fgl": "Fresh-Vegetables/vg-fgl.jpg",
+              "vg-fsh": "Fresh-Vegetables/vg-fsh.jpg",
+              "vg-fgp": "Fresh-Vegetables/vg-fgp.jpg",
+              "vg-fcb": "Fresh-Vegetables/vg-fcb.jpg",
+              "vg-fcf": "Fresh-Vegetables/vg-fcf.jpg",
+              "tx-mfs": "Textiles-Garments/tx-mfs.jpg",
+              "tx-wkc": "Textiles-Garments/tx-wkc.jpg",
+              "tx-mdj": "Textiles-Garments/tx-mdj.jpg",
+              "tx-cbs": "Textiles-Garments/tx-cbs.jpg",
+              "tx-cbt": "Textiles-Garments/tx-cbt.jpg",
+              "tx-cfw": "Textiles-Garments/tx-cfw.jpg",
+              "tx-iss": "Textiles-Garments/tx-iss.jpg",
+              "tx-ccp": "Textiles-Garments/tx-ccp.jpg",
+              "tx-crd": "Textiles-Garments/tx-crd.jpg",
+              "ch-sal": "Industrial-Chemicals/ch-sal.jpg",
+              "ch-lab": "Industrial-Chemicals/ch-lab.jpg",
+              "ch-met": "Industrial-Chemicals/ch-met.jpg",
+              "ch-aca": "Industrial-Chemicals/ch-aca.jpg",
+              "ch-foa": "Industrial-Chemicals/ch-foa.jpg",
+              "ch-hyp": "Industrial-Chemicals/ch-hyp.jpg",
+              "ch-tio": "Industrial-Chemicals/ch-tio.jpg",
+              "ch-ipa": "Industrial-Chemicals/ch-ipa.jpg",
+              "ch-eta": "Industrial-Chemicals/ch-eta.jpg",
+              "ch-cbl": "Industrial-Chemicals/ch-cbl.jpg",
+              "ch-aca-an": "Industrial-Chemicals/ch-aca-an.jpg",
+              "ph-amc": "Pharmaceutical-Drugs/ph-amc.jpg",
+              "ph-azt": "Pharmaceutical-Drugs/ph-azt.jpg",
+              "ph-met-tab": "Pharmaceutical-Drugs/ph-met-tab.jpg",
+              "ph-atv": "Pharmaceutical-Drugs/ph-atv.jpg",
+              "ph-omp": "Pharmaceutical-Drugs/ph-omp.jpg",
+              "ph-pnt": "Pharmaceutical-Drugs/ph-pnt.jpg",
+              "ph-ctz": "Pharmaceutical-Drugs/ph-ctz.jpg",
+              "ph-ibp": "Pharmaceutical-Drugs/ph-ibp.jpg",
+              "ph-cpf": "Pharmaceutical-Drugs/ph-cpf.jpg",
+              "ph-ors": "Pharmaceutical-Drugs/ph-ors.jpg",
+              "ph-vbc": "Pharmaceutical-Drugs/ph-vbc.jpg",
+              "ph-ins": "Pharmaceutical-Drugs/ph-ins.jpg",
+              "ph-msv": "Pharmaceutical-Drugs/ph-msv.jpg",
+          }
 
           with manifest.open("r", encoding="utf-8", newline="") as handle:
               reader = csv.DictReader(handle)
-              fieldnames = reader.fieldnames
+              fields = reader.fieldnames
               rows = list(reader)
 
           for row in rows:
               product_id = row["product_id"]
-              if product_id in imported:
-                  row["image_path"] = imported[product_id]
-                  row["image_status"] = "imported_existing"
+              if product_id in existing_source:
+                  path = existing_source[product_id]
+                  if Path(path).is_file():
+                      row["image_path"] = path
+                      row["image_status"] = "imported_existing"
+              elif product_id in url_imports:
+                  path = url_imports[product_id]
+                  if Path(path).is_file():
+                      row["image_path"] = path
+                      row["image_status"] = "downloaded_catalog_source"
+              # Rows without a matching file remain marked pending.
 
           with manifest.open("w", encoding="utf-8", newline="") as handle:
-              writer = csv.DictWriter(handle, fieldnames=fieldnames)
+              writer = csv.DictWriter(handle, fieldnames=fields)
               writer.writeheader()
               writer.writerows(rows)
 
-      - name: Commit imported product images
+      - name: Commit image library updates
         shell: bash
         run: |
           set -euo pipefail
@@ -96,5 +210,5 @@ jobs:
             echo "No image changes to commit."
             exit 0
           fi
-          git commit -m "Import available individual product images"
+          git commit -m "Import additional individual catalog product images"
           git push
