@@ -17,49 +17,49 @@ fr2,Bhagwa Pomegranate,Fresh Fruits,Fresh-Fruits/fr2.png,imported_existing
 pl1,Basmati Rice (1121 XL),Pulses & Grains,Pulses-Grains/pl1.png,imported_existing
 pl2,Kabuli Chickpeas (Dollar),Pulses & Grains,Pulses-Grains/pl2.png,imported_existing
 vg-fro,Fresh Red Onions - Export-grade red onions,Fresh Vegetables,Fresh-Vegetables/vg-fro.png,imported_existing
-vg-fpt,Fresh Potatoes - Table potatoes,Fresh Vegetables,Fresh-Vegetables/vg-fpt.jpg,pending
-vg-fgc,Fresh Green Chillies - Indian green chillies,Fresh Vegetables,Fresh-Vegetables/vg-fgc.jpg,pending
-vg-fmt,Fresh Tomatoes - Red tomatoes,Fresh Vegetables,Fresh-Vegetables/vg-fmt.jpg,pending
-vg-fob,Fresh Okra (Bhindi) - Tender green okra,Fresh Vegetables,Fresh-Vegetables/vg-fob.jpg,pending
-vg-fgl,Fresh Garlic - Whole garlic bulbs,Fresh Vegetables,Fresh-Vegetables/vg-fgl.jpg,pending
-vg-fsh,Fresh Shallots - Small onions,Fresh Vegetables,Fresh-Vegetables/vg-fsh.jpg,pending
-vg-fgp,Fresh Green Capsicum - Green bell peppers,Fresh Vegetables,Fresh-Vegetables/vg-fgp.jpg,pending
-vg-fcb,Fresh Cabbage - Green cabbage heads,Fresh Vegetables,Fresh-Vegetables/vg-fcb.jpg,pending
-vg-fcf,Fresh Cauliflower - White cauliflower heads,Fresh Vegetables,Fresh-Vegetables/vg-fcf.jpg,pending
+vg-fpt,Fresh Potatoes - Table potatoes,Fresh Vegetables,Fresh-Vegetables/vg-fpt.jpg,downloaded_catalog_source
+vg-fgc,Fresh Green Chillies - Indian green chillies,Fresh Vegetables,Fresh-Vegetables/vg-fgc.jpg,downloaded_catalog_source
+vg-fmt,Fresh Tomatoes - Red tomatoes,Fresh Vegetables,Fresh-Vegetables/vg-fmt.jpg,downloaded_catalog_source
+vg-fob,Fresh Okra (Bhindi) - Tender green okra,Fresh Vegetables,Fresh-Vegetables/vg-fob.jpg,downloaded_catalog_source
+vg-fgl,Fresh Garlic - Whole garlic bulbs,Fresh Vegetables,Fresh-Vegetables/vg-fgl.jpg,downloaded_catalog_source
+vg-fsh,Fresh Shallots - Small onions,Fresh Vegetables,Fresh-Vegetables/vg-fsh.jpg,downloaded_catalog_source
+vg-fgp,Fresh Green Capsicum - Green bell peppers,Fresh Vegetables,Fresh-Vegetables/vg-fgp.jpg,downloaded_catalog_source
+vg-fcb,Fresh Cabbage - Green cabbage heads,Fresh Vegetables,Fresh-Vegetables/vg-fcb.jpg,downloaded_catalog_source
+vg-fcf,Fresh Cauliflower - White cauliflower heads,Fresh Vegetables,Fresh-Vegetables/vg-fcf.jpg,downloaded_catalog_source
 tx1,Cotton Yarn (Combed/Carded),Textiles & Garments,Textiles-Garments/tx1.png,imported_existing
-tx-mfs,Men's Cotton Shirts - Formal,Textiles & Garments,Textiles-Garments/tx-mfs.jpg,pending
-tx-wkc,Women's Kurtis - Cotton,Textiles & Garments,Textiles-Garments/tx-wkc.jpg,pending
+tx-mfs,Men's Cotton Shirts - Formal,Textiles & Garments,Textiles-Garments/tx-mfs.jpg,downloaded_catalog_source
+tx-wkc,Women's Kurtis - Cotton,Textiles & Garments,Textiles-Garments/tx-wkc.jpg,downloaded_catalog_source
 tx-mdj,Denim Jeans - Men's,Textiles & Garments,Textiles-Garments/tx-mdj.jpg,pending
-tx-cbs,Cotton Bedsheets - King Size,Textiles & Garments,Textiles-Garments/tx-cbs.jpg,pending
-tx-cbt,Cotton Bath Towels - Premium,Textiles & Garments,Textiles-Garments/tx-cbt.jpg,pending
-tx-cfw,Cotton Fabric - Woven,Textiles & Garments,Textiles-Garments/tx-cfw.jpg,pending
-tx-iss,Indian Sarees - Silk,Textiles & Garments,Textiles-Garments/tx-iss.jpg,pending
-tx-ccp,Cushion Covers - Printed,Textiles & Garments,Textiles-Garments/tx-ccp.jpg,pending
-tx-crd,Cotton Rugs & Dhurries - Handwoven,Textiles & Garments,Textiles-Garments/tx-crd.jpg,pending
+tx-cbs,Cotton Bedsheets - King Size,Textiles & Garments,Textiles-Garments/tx-cbs.jpg,downloaded_catalog_source
+tx-cbt,Cotton Bath Towels - Premium,Textiles & Garments,Textiles-Garments/tx-cbt.jpg,downloaded_catalog_source
+tx-cfw,Cotton Fabric - Woven,Textiles & Garments,Textiles-Garments/tx-cfw.jpg,downloaded_catalog_source
+tx-iss,Indian Sarees - Silk,Textiles & Garments,Textiles-Garments/tx-iss.jpg,downloaded_catalog_source
+tx-ccp,Cushion Covers - Printed,Textiles & Garments,Textiles-Garments/tx-ccp.jpg,downloaded_catalog_source
+tx-crd,Cotton Rugs & Dhurries - Handwoven,Textiles & Garments,Textiles-Garments/tx-crd.jpg,downloaded_catalog_source
 ch-csf,Caustic Soda Flakes - Sodium hydroxide,Industrial Chemicals,Industrial-Chemicals/ch-csf.png,imported_existing
-ch-sal,Soda Ash Light - Sodium carbonate,Industrial Chemicals,Industrial-Chemicals/ch-sal.jpg,pending
-ch-lab,Linear Alkylbenzene (LAB) - Detergent manufacturing raw material,Industrial Chemicals,Industrial-Chemicals/ch-lab.jpg,pending
+ch-sal,Soda Ash Light - Sodium carbonate,Industrial Chemicals,Industrial-Chemicals/ch-sal.jpg,downloaded_catalog_source
+ch-lab,Linear Alkylbenzene (LAB) - Detergent manufacturing raw material,Industrial Chemicals,Industrial-Chemicals/ch-lab.jpg,downloaded_catalog_source
 ch-met,Methanol - Industrial solvent and chemical feedstock,Industrial Chemicals,Industrial-Chemicals/ch-met.jpg,pending
-ch-aca,Acetic Acid - Chemical manufacturing and industrial processing,Industrial Chemicals,Industrial-Chemicals/ch-aca.jpg,pending
-ch-foa,"Formic Acid - Textile, leather, and rubber processing",Industrial Chemicals,Industrial-Chemicals/ch-foa.jpg,pending
-ch-hyp,"Hydrogen Peroxide - Pulp, paper, and textile processing",Industrial Chemicals,Industrial-Chemicals/ch-hyp.jpg,pending
-ch-tio,"Titanium Dioxide (TiO2) - Paints, coatings, and plastics",Industrial Chemicals,Industrial-Chemicals/ch-tio.jpg,pending
-ch-ipa,Isopropyl Alcohol (IPA) - Solvent and cleaning applications,Industrial Chemicals,Industrial-Chemicals/ch-ipa.jpg,pending
-ch-eta,"Ethyl Acetate - Industrial solvent for inks, coatings, and adhesives",Industrial Chemicals,Industrial-Chemicals/ch-eta.jpg,pending
-ch-cbl,"Carbon Black - Rubber, tyres, and industrial pigments",Industrial Chemicals,Industrial-Chemicals/ch-cbl.jpg,pending
-ch-aca-an,Acetic Anhydride - Pharmaceutical and chemical manufacturing,Industrial Chemicals,Industrial-Chemicals/ch-aca-an.jpg,pending
+ch-aca,Acetic Acid - Chemical manufacturing and industrial processing,Industrial Chemicals,Industrial-Chemicals/ch-aca.jpg,downloaded_catalog_source
+ch-foa,"Formic Acid - Textile, leather, and rubber processing",Industrial Chemicals,Industrial-Chemicals/ch-foa.jpg,downloaded_catalog_source
+ch-hyp,"Hydrogen Peroxide - Pulp, paper, and textile processing",Industrial Chemicals,Industrial-Chemicals/ch-hyp.jpg,downloaded_catalog_source
+ch-tio,"Titanium Dioxide (TiO2) - Paints, coatings, and plastics",Industrial Chemicals,Industrial-Chemicals/ch-tio.jpg,downloaded_catalog_source
+ch-ipa,Isopropyl Alcohol (IPA) - Solvent and cleaning applications,Industrial Chemicals,Industrial-Chemicals/ch-ipa.jpg,downloaded_catalog_source
+ch-eta,"Ethyl Acetate - Industrial solvent for inks, coatings, and adhesives",Industrial Chemicals,Industrial-Chemicals/ch-eta.jpg,downloaded_catalog_source
+ch-cbl,"Carbon Black - Rubber, tyres, and industrial pigments",Industrial Chemicals,Industrial-Chemicals/ch-cbl.jpg,downloaded_catalog_source
+ch-aca-an,Acetic Anhydride - Pharmaceutical and chemical manufacturing,Industrial Chemicals,Industrial-Chemicals/ch-aca-an.jpg,downloaded_catalog_source
 ph-pct,Paracetamol Tablets - Pain and fever relief,Pharmaceutical Drugs,Pharmaceutical-Drugs/ph-pct.png,imported_existing
-ph-amc,Amoxicillin Capsules - Antibiotic formulation,Pharmaceutical Drugs,Pharmaceutical-Drugs/ph-amc.jpg,pending
-ph-azt,Azithromycin Tablets - Antibiotic formulation,Pharmaceutical Drugs,Pharmaceutical-Drugs/ph-azt.jpg,pending
-ph-met-tab,Metformin Tablets - Diabetes medication,Pharmaceutical Drugs,Pharmaceutical-Drugs/ph-met-tab.jpg,pending
-ph-atv,Atorvastatin Tablets - Cholesterol management,Pharmaceutical Drugs,Pharmaceutical-Drugs/ph-atv.jpg,pending
+ph-amc,Amoxicillin Capsules - Antibiotic formulation,Pharmaceutical Drugs,Pharmaceutical-Drugs/ph-amc.jpg,downloaded_catalog_source
+ph-azt,Azithromycin Tablets - Antibiotic formulation,Pharmaceutical Drugs,Pharmaceutical-Drugs/ph-azt.jpg,downloaded_catalog_source
+ph-met-tab,Metformin Tablets - Diabetes medication,Pharmaceutical Drugs,Pharmaceutical-Drugs/ph-met-tab.jpg,downloaded_catalog_source
+ph-atv,Atorvastatin Tablets - Cholesterol management,Pharmaceutical Drugs,Pharmaceutical-Drugs/ph-atv.jpg,downloaded_catalog_source
 ph-omp,Omeprazole Capsules - Acid reflux treatment,Pharmaceutical Drugs,Pharmaceutical-Drugs/ph-omp.jpg,pending
-ph-pnt,Pantoprazole Tablets - Acid-related conditions,Pharmaceutical Drugs,Pharmaceutical-Drugs/ph-pnt.jpg,pending
-ph-ctz,Cetirizine Tablets - Allergy relief,Pharmaceutical Drugs,Pharmaceutical-Drugs/ph-ctz.jpg,pending
-ph-ibp,Ibuprofen Tablets - Pain and inflammation relief,Pharmaceutical Drugs,Pharmaceutical-Drugs/ph-ibp.jpg,pending
-ph-cpf,Ciprofloxacin Tablets - Antibiotic formulation,Pharmaceutical Drugs,Pharmaceutical-Drugs/ph-cpf.jpg,pending
-ph-ors,Oral Rehydration Salts (ORS) - Dehydration management,Pharmaceutical Drugs,Pharmaceutical-Drugs/ph-ors.jpg,pending
-ph-vbc,Vitamin B-Complex Tablets - Vitamin supplementation,Pharmaceutical Drugs,Pharmaceutical-Drugs/ph-vbc.jpg,pending
-ph-ins,Insulin Injections - Diabetes treatment,Pharmaceutical Drugs,Pharmaceutical-Drugs/ph-ins.jpg,pending
+ph-pnt,Pantoprazole Tablets - Acid-related conditions,Pharmaceutical Drugs,Pharmaceutical-Drugs/ph-pnt.jpg,downloaded_catalog_source
+ph-ctz,Cetirizine Tablets - Allergy relief,Pharmaceutical Drugs,Pharmaceutical-Drugs/ph-ctz.jpg,downloaded_catalog_source
+ph-ibp,Ibuprofen Tablets - Pain and inflammation relief,Pharmaceutical Drugs,Pharmaceutical-Drugs/ph-ibp.jpg,downloaded_catalog_source
+ph-cpf,Ciprofloxacin Tablets - Antibiotic formulation,Pharmaceutical Drugs,Pharmaceutical-Drugs/ph-cpf.jpg,downloaded_catalog_source
+ph-ors,Oral Rehydration Salts (ORS) - Dehydration management,Pharmaceutical Drugs,Pharmaceutical-Drugs/ph-ors.jpg,downloaded_catalog_source
+ph-vbc,Vitamin B-Complex Tablets - Vitamin supplementation,Pharmaceutical Drugs,Pharmaceutical-Drugs/ph-vbc.jpg,downloaded_catalog_source
+ph-ins,Insulin Injections - Diabetes treatment,Pharmaceutical Drugs,Pharmaceutical-Drugs/ph-ins.jpg,downloaded_catalog_source
 ph-amc-clv,Amoxicillin + Clavulanic Acid Tablets - Combination antibiotic,Pharmaceutical Drugs,Pharmaceutical-Drugs/ph-amc-clv.jpg,pending
-ph-msv,Measles Vaccine - Vaccine for immunization,Pharmaceutical Drugs,Pharmaceutical-Drugs/ph-msv.jpg,pending
+ph-msv,Measles Vaccine - Vaccine for immunization,Pharmaceutical Drugs,Pharmaceutical-Drugs/ph-msv.jpg,downloaded_catalog_source
