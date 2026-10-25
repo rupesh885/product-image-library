@@ -1,0 +1,100 @@
+name: Seed existing product images
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/seed-existing-images.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  seed-images:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Import available individual images from myImages
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          download_image() {
+            local source="$1"
+            local destination="$2"
+            mkdir -p "$(dirname "$destination")"
+            curl --fail --location --retry 2 \
+              "https://raw.githubusercontent.com/rupesh885/myImages/main/$source" \
+              --output "$destination"
+          }
+
+          download_image "turmeric.png" "Indian-Spices/sp-ltp.png"
+          download_image "redchilli_powder.png" "Indian-Spices/sp-rcp.png"
+          download_image "black_pepper.png" "Indian-Spices/sp3.png"
+          download_image "green_cardamon.png" "Indian-Spices/sp4.png"
+          download_image "mango.png" "Fresh-Fruits/fr1.png"
+          download_image "pomogrenade.png" "Fresh-Fruits/fr2.png"
+          download_image "basmati-rice.png" "Pulses-Grains/pl1.png"
+          download_image "kabulicheapeas.png" "Pulses-Grains/pl2.png"
+          download_image "redonions.png" "Fresh-Vegetables/vg-fro.png"
+          download_image "Cotton_Yarn.png" "Textiles-Garments/tx1.png"
+          download_image "Caustic_Soda.png" "Industrial-Chemicals/ch-csf.png"
+          download_image "paracetamol.png" "Pharmaceutical-Drugs/ph-pct.png"
+
+          # Remove the initial test JPEG so the manifest points to the proper imported PNG.
+          rm -f "Indian-Spices/sp-ltp.jpg"
+
+      - name: Update catalog manifest for imported files
+        shell: python
+        run: |
+          import csv
+          from pathlib import Path
+
+          manifest = Path("products.csv")
+          imported = {
+              "sp-ltp": "Indian-Spices/sp-ltp.png",
+              "sp-rcp": "Indian-Spices/sp-rcp.png",
+              "sp3": "Indian-Spices/sp3.png",
+              "sp4": "Indian-Spices/sp4.png",
+              "fr1": "Fresh-Fruits/fr1.png",
+              "fr2": "Fresh-Fruits/fr2.png",
+              "pl1": "Pulses-Grains/pl1.png",
+              "pl2": "Pulses-Grains/pl2.png",
+              "vg-fro": "Fresh-Vegetables/vg-fro.png",
+              "tx1": "Textiles-Garments/tx1.png",
+              "ch-csf": "Industrial-Chemicals/ch-csf.png",
+              "ph-pct": "Pharmaceutical-Drugs/ph-pct.png",
+          }
+
+          with manifest.open("r", encoding="utf-8", newline="") as handle:
+              reader = csv.DictReader(handle)
+              fieldnames = reader.fieldnames
+              rows = list(reader)
+
+          for row in rows:
+              product_id = row["product_id"]
+              if product_id in imported:
+                  row["image_path"] = imported[product_id]
+                  row["image_status"] = "imported_existing"
+
+          with manifest.open("w", encoding="utf-8", newline="") as handle:
+              writer = csv.DictWriter(handle, fieldnames=fieldnames)
+              writer.writeheader()
+              writer.writerows(rows)
+
+      - name: Commit imported product images
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          if git diff --cached --quiet; then
+            echo "No image changes to commit."
+            exit 0
+          fi
+          git commit -m "Import available individual product images"
+          git push
