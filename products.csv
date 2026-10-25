@@ -1,0 +1,65 @@
+product_id,product_name,category,image_path,image_status
+sp-ltp,Lakadong Turmeric Powder (High Curcumin),Indian Spices,Indian-Spices/sp-ltp.jpg,uploaded
+sp-kcp,Kashmiri Red Chilli Powder,Indian Spices,Indian-Spices/sp-kcp.jpg,pending
+sp-mbp,Malabar Black Pepper Powder,Indian Spices,Indian-Spices/sp-mbp.jpg,pending
+sp-gcp,Green Cardamom Powder,Indian Spices,Indian-Spices/sp-gcp.jpg,pending
+sp-stp,Standard Turmeric Powder,Indian Spices,Indian-Spices/sp-stp.jpg,pending
+sp-rcp,Red Chilli Powder,Indian Spices,Indian-Spices/sp-rcp.jpg,pending
+sp-cup,Cumin Powder,Indian Spices,Indian-Spices/sp-cup.jpg,pending
+sp-cop,Coriander Powder,Indian Spices,Indian-Spices/sp-cop.jpg,pending
+sp-bpp,Black Pepper Powder,Indian Spices,Indian-Spices/sp-bpp.jpg,pending
+sp1,Lakadong Turmeric (High Curcumin Whole),Indian Spices,Indian-Spices/sp1.jpg,pending
+sp2,Kashmiri Red Chilli (Stemless Whole),Indian Spices,Indian-Spices/sp2.jpg,pending
+sp3,Malabar Black Pepper (TGSEB Whole),Indian Spices,Indian-Spices/sp3.jpg,pending
+sp4,Green Cardamom (8mm Bold Pods),Indian Spices,Indian-Spices/sp4.jpg,pending
+fr1,Alphonso Mango (GI Tagged),Fresh Fruits,Fresh-Fruits/fr1.jpg,pending
+fr2,Bhagwa Pomegranate,Fresh Fruits,Fresh-Fruits/fr2.jpg,pending
+pl1,Basmati Rice (1121 XL),Pulses & Grains,Pulses-Grains/pl1.jpg,pending
+pl2,Kabuli Chickpeas (Dollar),Pulses & Grains,Pulses-Grains/pl2.jpg,pending
+vg-fro,Fresh Red Onions - Export-grade red onions,Fresh Vegetables,Fresh-Vegetables/vg-fro.jpg,pending
+vg-fpt,Fresh Potatoes - Table potatoes,Fresh Vegetables,Fresh-Vegetables/vg-fpt.jpg,pending
+vg-fgc,Fresh Green Chillies - Indian green chillies,Fresh Vegetables,Fresh-Vegetables/vg-fgc.jpg,pending
+vg-fmt,Fresh Tomatoes - Red tomatoes,Fresh Vegetables,Fresh-Vegetables/vg-fmt.jpg,pending
+vg-fob,Fresh Okra (Bhindi) - Tender green okra,Fresh Vegetables,Fresh-Vegetables/vg-fob.jpg,pending
+vg-fgl,Fresh Garlic - Whole garlic bulbs,Fresh Vegetables,Fresh-Vegetables/vg-fgl.jpg,pending
+vg-fsh,Fresh Shallots - Small onions,Fresh Vegetables,Fresh-Vegetables/vg-fsh.jpg,pending
+vg-fgp,Fresh Green Capsicum - Green bell peppers,Fresh Vegetables,Fresh-Vegetables/vg-fgp.jpg,pending
+vg-fcb,Fresh Cabbage - Green cabbage heads,Fresh Vegetables,Fresh-Vegetables/vg-fcb.jpg,pending
+vg-fcf,Fresh Cauliflower - White cauliflower heads,Fresh Vegetables,Fresh-Vegetables/vg-fcf.jpg,pending
+tx1,Cotton Yarn (Combed/Carded),Textiles & Garments,Textiles-Garments/tx1.jpg,pending
+tx-mfs,Men's Cotton Shirts - Formal,Textiles & Garments,Textiles-Garments/tx-mfs.jpg,pending
+tx-wkc,Women's Kurtis - Cotton,Textiles & Garments,Textiles-Garments/tx-wkc.jpg,pending
+tx-mdj,Denim Jeans - Men's,Textiles & Garments,Textiles-Garments/tx-mdj.jpg,pending
+tx-cbs,Cotton Bedsheets - King Size,Textiles & Garments,Textiles-Garments/tx-cbs.jpg,pending
+tx-cbt,Cotton Bath Towels - Premium,Textiles & Garments,Textiles-Garments/tx-cbt.jpg,pending
+tx-cfw,Cotton Fabric - Woven,Textiles & Garments,Textiles-Garments/tx-cfw.jpg,pending
+tx-iss,Indian Sarees - Silk,Textiles & Garments,Textiles-Garments/tx-iss.jpg,pending
+tx-ccp,Cushion Covers - Printed,Textiles & Garments,Textiles-Garments/tx-ccp.jpg,pending
+tx-crd,Cotton Rugs & Dhurries - Handwoven,Textiles & Garments,Textiles-Garments/tx-crd.jpg,pending
+ch-csf,Caustic Soda Flakes - Sodium hydroxide,Industrial Chemicals,Industrial-Chemicals/ch-csf.jpg,pending
+ch-sal,Soda Ash Light - Sodium carbonate,Industrial Chemicals,Industrial-Chemicals/ch-sal.jpg,pending
+ch-lab,Linear Alkylbenzene (LAB) - Detergent manufacturing raw material,Industrial Chemicals,Industrial-Chemicals/ch-lab.jpg,pending
+ch-met,Methanol - Industrial solvent and chemical feedstock,Industrial Chemicals,Industrial-Chemicals/ch-met.jpg,pending
+ch-aca,Acetic Acid - Chemical manufacturing and industrial processing,Industrial Chemicals,Industrial-Chemicals/ch-aca.jpg,pending
+ch-foa,"Formic Acid - Textile, leather, and rubber processing",Industrial Chemicals,Industrial-Chemicals/ch-foa.jpg,pending
+ch-hyp,"Hydrogen Peroxide - Pulp, paper, and textile processing",Industrial Chemicals,Industrial-Chemicals/ch-hyp.jpg,pending
+ch-tio,"Titanium Dioxide (TiO2) - Paints, coatings, and plastics",Industrial Chemicals,Industrial-Chemicals/ch-tio.jpg,pending
+ch-ipa,Isopropyl Alcohol (IPA) - Solvent and cleaning applications,Industrial Chemicals,Industrial-Chemicals/ch-ipa.jpg,pending
+ch-eta,"Ethyl Acetate - Industrial solvent for inks, coatings, and adhesives",Industrial Chemicals,Industrial-Chemicals/ch-eta.jpg,pending
+ch-cbl,"Carbon Black - Rubber, tyres, and industrial pigments",Industrial Chemicals,Industrial-Chemicals/ch-cbl.jpg,pending
+ch-aca-an,Acetic Anhydride - Pharmaceutical and chemical manufacturing,Industrial Chemicals,Industrial-Chemicals/ch-aca-an.jpg,pending
+ph-pct,Paracetamol Tablets - Pain and fever relief,Pharmaceutical Drugs,Pharmaceutical-Drugs/ph-pct.jpg,pending
+ph-amc,Amoxicillin Capsules - Antibiotic formulation,Pharmaceutical Drugs,Pharmaceutical-Drugs/ph-amc.jpg,pending
+ph-azt,Azithromycin Tablets - Antibiotic formulation,Pharmaceutical Drugs,Pharmaceutical-Drugs/ph-azt.jpg,pending
+ph-met-tab,Metformin Tablets - Diabetes medication,Pharmaceutical Drugs,Pharmaceutical-Drugs/ph-met-tab.jpg,pending
+ph-atv,Atorvastatin Tablets - Cholesterol management,Pharmaceutical Drugs,Pharmaceutical-Drugs/ph-atv.jpg,pending
+ph-omp,Omeprazole Capsules - Acid reflux treatment,Pharmaceutical Drugs,Pharmaceutical-Drugs/ph-omp.jpg,pending
+ph-pnt,Pantoprazole Tablets - Acid-related conditions,Pharmaceutical Drugs,Pharmaceutical-Drugs/ph-pnt.jpg,pending
+ph-ctz,Cetirizine Tablets - Allergy relief,Pharmaceutical Drugs,Pharmaceutical-Drugs/ph-ctz.jpg,pending
+ph-ibp,Ibuprofen Tablets - Pain and inflammation relief,Pharmaceutical Drugs,Pharmaceutical-Drugs/ph-ibp.jpg,pending
+ph-cpf,Ciprofloxacin Tablets - Antibiotic formulation,Pharmaceutical Drugs,Pharmaceutical-Drugs/ph-cpf.jpg,pending
+ph-ors,Oral Rehydration Salts (ORS) - Dehydration management,Pharmaceutical Drugs,Pharmaceutical-Drugs/ph-ors.jpg,pending
+ph-vbc,Vitamin B-Complex Tablets - Vitamin supplementation,Pharmaceutical Drugs,Pharmaceutical-Drugs/ph-vbc.jpg,pending
+ph-ins,Insulin Injections - Diabetes treatment,Pharmaceutical Drugs,Pharmaceutical-Drugs/ph-ins.jpg,pending
+ph-amc-clv,Amoxicillin + Clavulanic Acid Tablets - Combination antibiotic,Pharmaceutical Drugs,Pharmaceutical-Drugs/ph-amc-clv.jpg,pending
+ph-msv,Measles Vaccine - Vaccine for immunization,Pharmaceutical Drugs,Pharmaceutical-Drugs/ph-msv.jpg,pending
