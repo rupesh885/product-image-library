@@ -1,21 +1,24 @@
 # Product Image Library
 
-A catalog of individual product image assets for the R&J Import Export product catalog.
+Individual product image assets for the R&J Import Export catalog.
 
-## Current status
+## Current verified status
 
-- **64** products tracked in `products.csv`.
-- **12** individual product images have been imported from the existing `rupesh885/myImages` repository.
-- **52** products still need their own image.
-- Imported assets are marked `imported_existing`; they are existing files, not newly generated photos.
-- The initial test upload was removed; the product folder now contains the imported image file for Lakadong Turmeric.
+- **64** product listings are tracked in `products.csv`.
+- **51** products currently have separate image files in this repository.
+- **12** images were imported from the existing `rupesh885/myImages` repository.
+- **39** additional individual images were downloaded from image URLs already present in the supplied product catalog.
+- **13** products remain pending and do not yet have an image file in this repository.
+- No multi-product collage is used as an individual product asset.
 
-## Image policy
+Images imported from the existing repository and catalog URLs are identified as such in the `image_status` column. They are not represented as newly AI-generated images.
 
-- One image file per product; do not use multi-product collages as product assets.
-- Filenames and paths follow the product IDs in `products.csv`.
-- Prefer 1200×1200 product photography with a clean background and consistent lighting.
-- Update `image_status` in `products.csv` after each image has actually been added and verified.
+## Image requirements
+
+- One image file per product.
+- Filenames and paths are mapped by product ID in `products.csv`.
+- Prefer a consistent square crop, clean background, and product-focused framing.
+- Update the manifest only after the corresponding image file has been added and verified.
 
 ## Categories
 
@@ -27,9 +30,7 @@ A catalog of individual product image assets for the R&J Import Export product c
 - `Industrial-Chemicals/`
 - `Pharmaceutical-Drugs/`
 
-## Files
+## Key files
 
 - [Product manifest](products.csv)
-- [Import workflow](.github/workflows/seed-existing-images.yml)
-
-The import workflow copied matching images that already existed in `myImages`. Continue creating and adding separate product images for the remaining manifest entries.
+- [Image import workflow](.github/workflows/seed-existing-images.yml)
