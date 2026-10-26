@@ -1,5 +1,5 @@
 product_id,product_name,category,image_path,image_status
-sp-ltp,Lakadong Turmeric Powder (High Curcumin),Indian Spices,Indian-Spices/sp-ltp.png,imported_existing
+sp-ltp,Lakadong Turmeric Powder (High Curcumin),Indian Spices,Indian-Spices/sp-ltp-generated.svg,ai_generated_vector
 sp-kcp,Kashmiri Red Chilli Powder,Indian Spices,Indian-Spices/sp-kcp.jpg,pending
 sp-mbp,Malabar Black Pepper Powder,Indian Spices,Indian-Spices/sp-mbp.jpg,pending
 sp-gcp,Green Cardamom Powder,Indian Spices,Indian-Spices/sp-gcp.jpg,pending
